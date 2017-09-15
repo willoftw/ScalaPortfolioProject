@@ -16,7 +16,7 @@ class Basket(products:List[String])
         var sum:Float = 0
         for (product <- products)
         {
-            sum += (menu(product).price)
+            sum += (product_list(product).price)
         }
         sum
     }
