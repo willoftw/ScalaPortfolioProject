@@ -21,6 +21,12 @@ class ShopTests extends FunSuite {
         val basket = new Basket(products);
         assert(basket.getTotal() == 9.0)
     }
+
+    test("customer should not be charged more than £20 service charge") {
+        var products=List.fill(50)("Steak Sandwich")
+        val basket = new Basket(products);
+        assert(basket.getTotal() == 220.0)
+    }
     
 
 }
