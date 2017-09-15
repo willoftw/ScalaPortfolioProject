@@ -16,5 +16,12 @@ class ShopTests extends FunSuite {
         assert(basket.getTotal() == 3.85)
     }
 
+    test("When purchased items include any hot food apply a service charge of 20% to the total bill") {
+        var products=List("Cola","Coffee","Cheese Sandwich","Steak Sandwich")
+        val basket = new Basket(products);
+        assert(basket.getTotal() == 9.0)
+    }
+    
+
 }
 
