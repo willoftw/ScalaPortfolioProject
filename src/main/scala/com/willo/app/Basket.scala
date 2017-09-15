@@ -14,10 +14,18 @@ class Basket(products:List[String])
     def getTotal()=
     {
         var sum:Float = 0
+        var service:Float = 0
+
         for (product <- products)
         {
             sum += (product_list(product).price)
+            if(product_list(product).foodtype == "Food")
+                service = 10
+
         }
-        sum
+
+        sum+=((service/100)*sum);
+
+        Math.round(100 * sum) / 100d // Round to 2 decimal places
     }
 }
