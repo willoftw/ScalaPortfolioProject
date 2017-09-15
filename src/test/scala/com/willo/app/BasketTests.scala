@@ -4,10 +4,10 @@ import org.scalatest.FunSuite
 
 class ShopTests extends FunSuite {
 
-    test("the total should be calculated correctly") {
-        var products=List("Cola","Coffee","Cheese Sandwich")
+    test("When all purchased items are drinks no service charge is applied") {
+        var products=List("Cola","Coffee")
         val basket = new Basket(products);
-        assert(basket.getTotal() == 3.5)
+        assert(basket.getTotal() == 1.5)
     }
 
 }
