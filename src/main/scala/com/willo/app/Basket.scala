@@ -20,7 +20,10 @@ class Basket(products:List[String])
         {
             sum += (product_list(product).price)
             if(product_list(product).foodtype == "Food")
-                service = 10
+                if (product_list(product).temperature == "Hot")
+                    service = 20
+                else
+                    service = 10
 
         }
 
