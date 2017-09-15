@@ -27,7 +27,11 @@ class Basket(products:List[String])
 
         }
 
-        sum+=((service/100)*sum);
+        var servicecharge =((service/100)*sum);
+        if(servicecharge > 20)
+            servicecharge = 20
+
+        sum+=servicecharge;
 
         Math.round(100 * sum) / 100d // Round to 2 decimal places
     }
